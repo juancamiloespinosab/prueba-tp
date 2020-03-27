@@ -14,10 +14,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.httpClient.getApiJSON(data => {
-      console.log(data)
-      data.forEach(element => {
-        this.users.push(element)
-      });
+      this.users = data
     })
   }
 
