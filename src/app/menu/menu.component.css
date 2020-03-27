@@ -1,0 +1,21 @@
+.menu {
+    width: 100%;
+    background: rgba(0,0,0,.5);
+}
+
+.menu__opciones {
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+}
+
+.menu__opcion {
+    padding: 1rem;
+    text-align: left;
+    text-decoration: none;
+    
+    color: white;
+    font-size: 18px;
+    font-weight: 800;
+
+    cursor: pointer;
+}

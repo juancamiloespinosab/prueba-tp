@@ -1,0 +1,40 @@
+<div class="contenedor">
+
+    <div>
+    <div class="tabla">
+
+        <div class="tabla__titulos">
+            <h1 class="tabla__campo">ID</h1>
+            <h1 class="tabla__campo">Documento</h1>
+            <h1 class="tabla__campo">Nombres</h1>
+            <h1 class="tabla__campo">Fecha Inicio</h1>
+            <h1 class="tabla__campo">Fecha Fin</h1>
+            <h1 class="tabla__campo">Horario Inicio de Turno</h1>
+            <h1 class="tabla__campo">Horario Fin de Turno</h1>
+            <h1 class="tabla__campo">Horario Inicio Hora Extra</h1>
+            <h1 class="tabla__campo">Horario Fin Hora Extra</h1>
+            <h1 class="tabla__campo">Motivo Hora Extra</h1>
+        </div>
+
+        <div class="tabla__cuerpo" *ngFor="let reporte of reportes">
+            <p class="tabla__campo">{{ reporte.ID }}</p>
+            <p class="tabla__campo">{{ reporte.DOCUMENTO }}</p>
+            <p class="tabla__campo">{{ reporte.NOMBRES }}</p>
+            <p class="tabla__campo">{{ reporte.FECHA_INICIO }}</p>
+            <p class="tabla__campo">{{ reporte.FECHA_FIN }}</p>
+            <p class="tabla__campo">{{ reporte.HORA_INICIO }}</p>
+            <p class="tabla__campo">{{ reporte.HORA_FIN }}</p>
+            <p class="tabla__campo">{{ reporte.HORA_EXTRA_INICIO }}</p>
+            <p class="tabla__campo">{{ reporte.HORA_EXTRA_FIN }}</p>
+            <p class="tabla__campo">{{ reporte.MOTIVO_HORA_EXTRA }}</p>
+        </div>
+
+        <button (click)="toggleMostrarReportar()" class="tabla__insertar-nuevo">{{ textoBoton }}</button>
+
+        <div *ngIf="mostrarReportar">
+            <app-reportar (actualizar)="obtenerReportes()"></app-reportar>
+        </div>
+
+    </div>
+
+</div>

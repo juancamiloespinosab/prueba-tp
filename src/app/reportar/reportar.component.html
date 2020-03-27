@@ -1,0 +1,101 @@
+<div class="ventana-reportar">
+
+    <div class="form-reportar">
+        <h1>Reportar Horas Extras</h1>
+
+        <form (change)="mensaje = null" class="form-reportar__tabla" action="">
+            <div class="form-reportar__campo">
+                <h2 class="form-reportar__titulo-campo">Documento</h2>
+                <input [(ngModel)]="reporte.documento"
+                    [ngClass]="{ 'valido': formulario.controls['documento'].valid, 'invalido': formulario.controls['documento'].invalid }"
+                    class="form-reportar__caja-campo" type="number" name="documento" id=""
+                    [formControl]="formulario.controls['documento']">
+            </div>
+
+            <div class="form-reportar__campo">
+                <h2 class="form-reportar__titulo-campo">Nombres y apellidos</h2>
+                <input [(ngModel)]="reporte.nombres"
+                    [ngClass]="{ 'valido': formulario.controls['nombres'].valid, 'invalido': formulario.controls['nombres'].invalid }"
+                    class="form-reportar__caja-campo" ty pe="text" name="nombres" id=""
+                    [formControl]="formulario.controls['nombres']">
+            </div>
+
+
+            <div class="form-reportar__campo">
+                <h2 class="form-reportar__titulo-campo">Fecha inicio</h2>
+                <input [(ngModel)]="reporte.fechaInicio"
+                    [ngClass]="{ 'valido': formulario.controls['fechaInicio'].valid, 'invalido': formulario.controls['fechaInicio'].invalid }"
+                    class="form-reportar__caja-campo" type="date" name="fechaInicio" id=""
+                    [formControl]="formulario.controls['fechaInicio']">
+            </div>
+
+
+            <div class="form-reportar__campo">
+                <h2 class="form-reportar__titulo-campo">Fecha fin</h2>
+                <input [(ngModel)]="reporte.fechaFin"
+                    [ngClass]="{ 'valido': formulario.controls['fechaFin'].valid, 'invalido': formulario.controls['fechaFin'].invalid }"
+                    class="form-reportar__caja-campo" type="date" name="fechaFin" id=""
+                    [formControl]="formulario.controls['fechaFin']">
+            </div>
+
+
+            <div class="form-reportar__campo">
+                <h2 class="form-reportar__titulo-campo">Horario inicio de turno</h2>
+                <input [(ngModel)]="reporte.horaInicio"
+                    [ngClass]="{ 'valido': formulario.controls['horaInicio'].valid, 'invalido': formulario.controls['horaInicio'].invalid }"
+                    class="form-reportar__caja-campo" type="number" name="horaInicio" id=""
+                    [formControl]="formulario.controls['horaInicio']">
+            </div>
+
+
+            <div class="form-reportar__campo">
+                <h2 class="form-reportar__titulo-campo">Horario fin de turno</h2>
+                <input [(ngModel)]="reporte.horaFin"
+                    [ngClass]="{ 'valido': formulario.controls['horaFin'].valid, 'invalido': formulario.controls['horaFin'].invalid }"
+                    class="form-reportar__caja-campo" type="number" name="horaFin" id=""
+                    [formControl]="formulario.controls['horaFin']">
+            </div>
+
+
+            <div class="form-reportar__campo">
+                <h2 class="form-reportar__titulo-campo">Horario inicio hora extra</h2>
+                <input [(ngModel)]="reporte.horaInicioExtra"
+                    [ngClass]="{ 'valido': formulario.controls['horaInicioExtra'].valid, 'invalido': formulario.controls['horaInicioExtra'].invalid }"
+                    class="form-reportar__caja-campo" type="number" name="horaInicioExtra" id=""
+                    [formControl]="formulario.controls['horaInicioExtra']">
+            </div>
+
+
+            <div class="form-reportar__campo">
+                <h2 class="form-reportar__titulo-campo">Horario fin hora extra</h2>
+                <input [(ngModel)]="reporte.horaFinExtra"
+                    [ngClass]="{ 'valido': formulario.controls['horaFinExtra'].valid, 'invalido': formulario.controls['horaFinExtra'].invalid }"
+                    class="form-reportar__caja-campo" type="number" name="horaFinExtra" id=""
+                    [formControl]="formulario.controls['horaFinExtra']">
+            </div>
+
+
+            <div class="form-reportar__campo col-2">
+                <h2 class="form-reportar__titulo-campo">Motivo horas extra</h2>
+                <textarea [(ngModel)]="reporte.motivoExtra"
+                    [ngClass]="{ 'valido': formulario.controls['motivoExtra'].valid, 'invalido': formulario.controls['motivoExtra'].invalid }"
+                    class="form-reportar__caja-campo" name="motivoExtra"
+                    [formControl]="formulario.controls['motivoExtra']"></textarea>
+            </div>
+
+            <div *ngIf="mensaje" class="form-reportar__campo col-2">
+                <h2>{{ mensaje }}</h2>
+            </div>
+
+            <div class="form-reportar__campo col-2">
+                <input (click)="enviarReporte()" class="form-reportar__enviar" type="button" value="Enviar Reporte">
+            </div>
+
+
+
+
+
+        </form>
+    </div>
+
+</div>

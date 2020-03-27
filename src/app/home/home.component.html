@@ -1,0 +1,18 @@
+<div class="contenedor">
+    <div class="tabla">
+
+        <div class="tabla__titulos">
+            <h1 class="tabla__campo">UserID</h1>
+            <h1 class="tabla__campo">ID</h1>
+            <h1 class="tabla__campo">Title</h1>
+            <h1 class="tabla__campo">Completed</h1>
+        </div>
+
+        <div class="tabla__cuerpo" *ngFor="let user of users">
+            <p class="tabla__campo">{{ user.userId }}</p>
+            <p class="tabla__campo">{{ user.id }}</p>
+            <p class="tabla__campo">{{ user.title }}</p>
+            <p class="tabla__campo">{{ user.completed }}</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 2rem;
+}
+
+.tabla {
+    width: 80%;
+
+    display: grid;
+    grid-template-columns: 1;
+
+}
+
+.tabla__titulos, .tabla__cuerpo {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1;
+}
+
+.tabla__titulos > h1, .tabla__cuerpo > p {
+    border-bottom: 1px solid grey;
+    text-align: center;
+    margin: 0;
+}
+
+.tabla__campo {
+    padding: 1rem;
+}
